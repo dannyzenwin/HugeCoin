@@ -947,15 +947,15 @@ void BitcoinGUI::gotoMasternodeManagerPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-//  BlockBrowser 
+//  BlockBrowser 按鈕程序  改為開啟網頁
 void BitcoinGUI::gotoBlockBrowser()
 {
-    blockAction->setChecked(true);
-    centralStackedWidget->setCurrentWidget(blockBrowser);
+//    blockAction->setChecked(true);
+//    centralStackedWidget->setCurrentWidget(blockBrowser);
 
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-
+//    exportAction->setEnabled(false);
+//    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+QDesktopServices::openUrl(QUrl("http://explorer.hugechain.net"));
 }
 
 void BitcoinGUI::gotoOverviewPage()
