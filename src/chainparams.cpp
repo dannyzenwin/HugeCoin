@@ -104,6 +104,8 @@ public:
 		base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1, 40);
 		base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xC2)(0x3E).convert_to_container<std::vector<unsigned char> >();
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xB4).convert_to_container<std::vector<unsigned char> >();
+		// e6->230	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+		base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xe6).convert_to_container<std::vector<unsigned char> >();
 
 		vSeeds.push_back(CDNSSeedData("0", "35.196.127.156"));
 		vSeeds.push_back(CDNSSeedData("1", "130.211.52.40"));
